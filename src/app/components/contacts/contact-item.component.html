@@ -1,0 +1,37 @@
+<div class="row">
+
+  <div class="col-lg-8 col-md-8 col-sm-6 col-xs-6">
+    <div class="row">
+      <div class="col-lg-6 col-md-6 col-sm-6">
+        <img src="{{contact.ImageUrl}}" style="height: 9rem;width: 9rem; border-radius: 5rem;border-color: black;border: 2px solid black;" onerror="this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5J6L-hjmHE1DXZzr2nEp8nse6ZltWqNwELAiJyA-rhyyOiCKD'"
+        />
+      </div>
+
+      <div class="col-lg-6 col-md-6 col-sm-6">
+        <h3 style="margin-top: 0px;">{{ contact.Name }}</h3>
+        <p>{{contact.Number}}</p>
+        <p>{{ contact.Email }}</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-lg-4 col-md-4  col-sm-6  col-xs-6">
+    <div style="display:inline">
+      <a (click)="onClickStar(contact)" *ngIf="contact.bFavourite">
+            <span class="glyphicon glyphicon-star" style="font-size:30px;position: relative;top: 11px;color:#ffcc00;"></span>
+          </a>
+      <a (click)="onClickStar(contact)" *ngIf="!contact.bFavourite">
+              <span class="glyphicon glyphicon-star-empty" style="font-size:30px;position: relative;top: 11px;color:#ffcc00;"></span>
+          </a>
+      <a (click)="onDeleteContact(contact)">
+              <span class="glyphicon glyphicon-remove-circle" style="font-size:30px;position: relative;top: 11px;color:red;"></span>
+          </a>
+    </div>
+    <div style="display:inline">
+      <a class="btn btn-info btn-lg" style="margin-left:10px" (click)="onEdit(contact.Number)">
+          <span class="glyphicon glyphicon-edit"></span> Edit
+        </a>
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,4 @@
+<ul class="nav nav-tabs">
+    <li  [ngClass]="{tabActive: bContactsClicked}" (click)="onClickContacts()" style="width:50%"><a   class="text-center">Contacts</a></li>
+    <li  [ngClass]="{tabActive: !bContactsClicked}" (click)="onClickFavourites()" style="width:50%"><a   class="text-center">Favourites</a></li>
+  </ul>

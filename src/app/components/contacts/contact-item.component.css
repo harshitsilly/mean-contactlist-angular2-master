@@ -1,0 +1,10 @@
+.imageCircle{
+    height: 9rem;
+    width: 9rem;
+    border-radius: 5rem;
+    border-color: black;
+    border: 2px solid black;
+}
+.findme{
+    color: green;
+}
